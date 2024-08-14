@@ -1,0 +1,66 @@
+/*https://www.youtube.com/watch?v=4ul3q-cEhvU*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-boxs;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #15001e;
+  color: white;
+}
+.clock-container {
+  position: relative;
+}
+
+.clock {
+  height: 800px;
+  width: 800px;
+  background-color: rgba(217, 0, 0, 0.619);
+  border: 20px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgb(255, 245, 245), inset 0 0 20px rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 35px;
+  text-align: center;
+}
+
+.clock span b {
+  transform: rotate(calc(-30deg * var(--i)));
+  font-size: 2.6rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.hand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hand i {
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  background-color: var(--clr);
+  border-radius: calc(var(--w));
+}
